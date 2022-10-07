@@ -1,0 +1,52 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Mars Rover Mission</h1>
+</div>
+<div class="container">
+    <div class="mb-3 mt-3">
+        <form method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label class="col-form-label">Upload CSV File with Rovers starting positions and Movements data:</label>
+                <input type="file" name="file" onchange="return fileValidation(file)" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary">Upload</button>
+            </div>
+        </form>
+    </div>
+    <div>
+        <label class="col-form-label">Rovers New Positions:</label>
+        <br />
+
+        @if (Model.RoversState!=null)
+        {
+            foreach (var rover in Model.RoversState)
+            {
+                <label class="col-form-label">@rover.ToString()</label>
+                <br />
+            }
+            Model.RoversState = null;
+        }
+    </div>
+</div>
+<Script type="text/javascript">
+    function fileValidation(fileInput) {
+        
+        var filePath = fileInput.value;
+
+        var allowedExtensions = /(\.csv)$/i;
+
+        if (!allowedExtensions.exec(filePath)) {
+                alert('Please upload CSV file');
+            fileInput.value = '';
+          
+                return false;
+            }
+        }
+    </script>
+
