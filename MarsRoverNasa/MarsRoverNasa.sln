@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.32228.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarsRoverNasa", "MarsRoverNasa\MarsRoverNasa.csproj", "{9762D1A3-1477-4C64-98F8-821BED1B1C58}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarsRoverTests", "..\MarsRover\MarsRoverTests\MarsRoverTests.csproj", "{023154D2-C216-40AC-83A4-469EA07150BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarsRoverTests", "MarsRoverTests\MarsRoverTests.csproj", "{023154D2-C216-40AC-83A4-469EA07150BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
